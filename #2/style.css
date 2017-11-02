@@ -1,0 +1,74 @@
+.box {
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(artdeco.jpg);
+}
+
+.clock {
+    height: 101px;
+    width: 101px;
+    border: 1px solid #B1A082;
+    border-radius: 50%;
+    background: #FFFAFA;
+    transform: rotate(180deg) scale(4);
+}
+
+.clock .hours {
+    border: 2px solid #323A51;
+    position: absolute;
+    height: 30%;
+    border-radius: 5px;
+    left: 48px;
+    top: 50px;
+    animation-duration: 43200s;
+}
+
+.clock .minutes {
+    border: 1px solid #323A51;
+    position: absolute;
+    height: 45%;
+    border-radius: 5px;
+    left: 48px;
+    top: 50px;
+    animation-duration: 3600s;
+}
+
+.clock .seconds {
+    border: 1px solid #B1A082;
+    position: absolute;
+    height: 45%;
+    border-radius: 5px;
+    left: 48px;
+    top: 50px;
+    animation-duration: 60s;
+    transition-timing-function: cubic-bezier(0.1, 0.1, 0.8, 3.0);
+}
+
+.dot {
+    border: 2px solid #323A51;
+    position: absolute;
+    border-radius: 50%;
+    left: 48px;
+    top: 48px;
+}
+
+.animate {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.hand {
+    transform-origin: top center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
